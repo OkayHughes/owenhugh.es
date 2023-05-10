@@ -127,6 +127,9 @@ src: local('CMU Serif BoldItalic'), url('https://cdn.glitch.global/e8981a37-07ba
   flex-wrap: wrap;
   border-top: 4px solid #fff;
 }
+a{
+   color: var(--lemon);
+}
 
 .footer a:not(.btn--remix):link,
 a:not(.btn--remix):visited {
