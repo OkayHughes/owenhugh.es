@@ -1,0 +1,288 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+
+/* 
+  The style rules specify elements by type and by attributes such as class and ID
+  Each section indicates an element or elements, then lists the style properties to apply
+  See if you can cross-reference the rules in this file with the elements in index.html
+*/
+
+@font-face {
+font-family: CMU Serif Roman;
+font-style: normal;
+font-weight: normal;
+src: local('CMU Serif Roman'), url('https://cdn.glitch.global/e8981a37-07ba-4bf2-afb3-4b610d03e3ed/cmunrm.woff?v=1674058152959') format('woff');
+}
+
+
+@font-face {
+font-family: CMU Serif Italic;
+font-style: normal;
+font-weight: normal;
+src: local('CMU Serif Italic'), url('https://cdn.glitch.global/e8981a37-07ba-4bf2-afb3-4b610d03e3ed/cmunti.woff?v=1674058191693') format('woff');
+}
+
+
+@font-face {
+font-family: CMU Serif Bold;
+font-style: normal;
+font-weight: normal;
+src: local('CMU Serif Bold'), url('https://cdn.glitch.global/e8981a37-07ba-4bf2-afb3-4b610d03e3ed/cmunbx.woff?v=1674058222963') format('woff');
+}
+
+
+@font-face {
+font-family: CMU Serif BoldItalic;
+font-style: normal;
+font-weight: normal;
+src: local('CMU Serif BoldItalic'), url('https://cdn.glitch.global/e8981a37-07ba-4bf2-afb3-4b610d03e3ed/cmunbi.woff?v=1674058488637') format('woff');
+}
+
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: #171921;
+  --color-text-main: #e8e5d8;
+  --color-primary: #FFFF00;
+  --wine: #401F3E;
+  --grape: #3F2E56;
+  --violet: #453F78;
+  --lightblue: #759AAB;
+  --lemon: #FAF2A1;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "CMU Serif Roman";
+  --font-family-header: "CMU Serif Roman";
+}
+
+
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Our remix on glitch button */
+.btn--remix {
+  font-family: CMU Serif Roman;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 2.75rem;
+  align-items: center;
+  cursor: pointer;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.btn--remix img {
+  margin-right: 0.5rem;
+}
+.btn--remix:hover {
+  background-color: #D0FFF1;
+}
+
+.color-demo{
+  width:100px;
+  height:100px;
+  color:white;
+  
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+}
+.color-holder{
+  
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+}
+
+
+/* Navigation grid */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto 0;
+  padding: 1rem 0 0.75rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top: 4px solid #fff;
+}
+
+.footer a:not(.btn--remix):link,
+a:not(.btn--remix):visited {
+  font-family: CMU Serif Roman;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: var(--lemon);
+  text-decoration: none;
+  border-style: none;
+}
+.footer a:hover {
+  background: var(--color-primary);
+}
+
+.footer .links {
+  padding: 0.5rem 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+body {
+  font-family: CMU Serif Roman;
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  display:flex;
+  flex-direction:column;
+}
+
+
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+
+
+/* Very light scaling for our illustration */
+.title {
+  color: #2800FF;
+  font-family: CMU Serif Roman;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 105%;
+  margin: 0;
+}
+
+/* Very light scaling for our illustration */
+.illustration {
+  max-width: 100%;
+  max-height: var(--image-max-width);
+  margin-top: var(--image-margin);
+}
+
+/* Instructions */
+.instructions {
+  margin: 1rem auto 0;
+}
+
+/* Button - Add it from the README instructions */
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: 500ms;
+}
+
+
+
+.header {
+  display:flex;
+  flex-direction:row;
+  height:10vh;
+}
+
+.content{
+  height:80vh;
+  overflow:scroll;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:center;
+}
+
+.entry {
+  width:80vw;
+  
+}
+
+.flexcol {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.textcol {
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:flex-start;
+  width:80%;
+}
+
+.text-content {
+  text-align:justify;
+}
+.flexrow {
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+div.pcont{
+  padding:20pt;
+}
+
+/* Interactive image */
+.illustration:active {
+  transform: translateY(5px);
+}
+
+/* Button dip
+- Toggling this class on and off will move it down and up again
+- The button transition property above determines the speed of the translate (500ms)
+*/
+.dipped {
+  transform: translateY(5px);
+}
+
+img.medium {
+  width:50%;
+}
+
+img.small {
+  width:200pt;
+}
+video.small {
+  width:200pt;
+}
+
+video.medium {
+  width:50vw;
+}
