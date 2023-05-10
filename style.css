@@ -236,6 +236,13 @@ input {
   justify-content:center;
   align-items:center;
 }
+.flexrow {
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+}
+
 
 .textcol {
   display:flex;
@@ -284,5 +291,5 @@ video.small {
 }
 
 video.medium {
-  width:50vw;
+  width:30vw;
 }
